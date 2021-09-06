@@ -1,0 +1,80 @@
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	color: white;
+	font-size: 1rem;
+}
+#title {
+	text-align: center;
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 5px;
+	width: 80%;
+	font-size: 2rem;
+	padding: 10px;
+
+}
+#description {
+	text-align: center;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 5px;
+	width: 80%;
+	font-size: 2rem;
+	padding: 10px;
+}
+
+body {
+	background: url("/images/tournamentbackground.jpg");
+	background-size: cover;
+	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centro el titulo */
+	justify-content: center; /* Centro el titulo */
+}
+
+#wrapper {
+	display: flex;
+	border: 3px solid purple;
+}
+
+#announcer-img-container {
+	/* max-width: 500px; */
+    border: 3px solid green;
+}
+.responsive-image {
+    max-width: 200px;
+}
+
+#survey-form {
+    border: 3px solid red;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0,0,0,0.7);
+
+}
+input {
+	border: none;
+	box-sizing: border-box;
+}
+input:hover {
+	border: none;
+	border-bottom: 2px solid orange;
+}
+input:focus {
+    border-bottom: 2px solid red;
+outline: none;
+}
+
+#basic-info-container {
+	display: flex;
+	flex-direction: column;
+    text-align: center;
+}
+
+#inscriptos {
+
+}
