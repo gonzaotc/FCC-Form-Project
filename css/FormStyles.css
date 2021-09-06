@@ -3,15 +3,22 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	src: url(/fonts/Saiyan-Sans.ttf);
+	font-family: Saiyan-Sans;
+}
+
 html {
 	color: white;
 	font-size: 1rem;
+	font-family: Saiyan-Sans;
+	font-weight: 1;
 }
 #title {
 	text-align: center;
 	background-color: rgba(0,0,0,0.6);
 	border-radius: 5px;
-	width: 80%;
+	width: 90%;
 	font-size: 2rem;
 	padding: 10px;
 
@@ -20,7 +27,7 @@ html {
 	text-align: center;
 	background-color: rgba(0,0,0,0.7);
 	border-radius: 5px;
-	width: 80%;
+	width: 90%;
 	font-size: 2rem;
 	padding: 10px;
 }
@@ -29,7 +36,7 @@ body {
 	background: url("/images/tournamentbackground.jpg");
 	background-size: cover;
 	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
-	height: 100vh;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center; /* Centro el titulo */
@@ -38,36 +45,61 @@ body {
 
 #wrapper {
 	display: flex;
-	border: 3px solid purple;
+	border: 3px solid black;
+	width: 90%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 #announcer-img-container {
 	/* max-width: 500px; */
     border: 3px solid green;
+	
+}
+
+#prize-container {
+	border: 3px solid white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .responsive-image {
-    max-width: 200px;
+    max-width: 300px;
+}
+
+#esfera {
+	max-width: 150px;
 }
 
 #survey-form {
+	padding: 5%;
     border: 3px solid red;
 	display: flex;
 	flex-direction: column;
 	background-color: rgba(0,0,0,0.7);
 
 }
-input {
+input,select {
+	background-color: white;
 	border: none;
+	appearance: none;
 	box-sizing: border-box;
+	outline: none;
+	border-radius: 7px;
+	border: 3px solid rgba(0,0,0,1);
+	transition: 0.3s ease;
+
+	font-family: Arial;
 }
-input:hover {
-	border: none;
-	border-bottom: 2px solid orange;
+/* input:hover {
+	border-bottom: 3px solid orange;
 }
 input:focus {
-    border-bottom: 2px solid red;
-outline: none;
-}
+    border-bottom: 3px solid red;
+} */
+
+
 
 #basic-info-container {
 	display: flex;
@@ -75,6 +107,81 @@ outline: none;
     text-align: center;
 }
 
-#inscriptos {
+label.basic-info {
+/* Position relative para poder usar absolute en hijos */
+	position: relative;
+	/* Mismo font-size que el input */
+	font-size: 1rem;
+	/* padding para mover el placeholder arriba */
+    padding-top: 20px;
+	border: 2px solid purple;
+}
 
+input.basic-info {
+    font-size: 1.5rem;
+	padding: 12px;
+	width: 100%;
+}
+
+.placeholder.basic-info {
+	color: rgba(255,100,0,1);
+	font-size: 1.6rem;
+	position: absolute;
+	/* el left es por el padding del input */
+	left: 12px;
+	/* El top y transform son para centrar.
+	el +10px es por el padding del label */
+	top: calc(50% + 10px);
+	transform: translateY(-50%);
+	/* border: 3px solid yellow; */
+	/* Transicion para el desplazamiento */
+	transition: 0.3s ease;
+}
+
+/* el + selecciona el elemento inmediatamente siguiente*/
+/* Aplico el focus y también el valid, para que luego de escribir,
+si se sale el focus, quede la transformacion. 
+Nota: valid aparece cuando es required y hay algo escrito.*/
+.basic-info input:focus + .placeholder.basic-info,
+.basic-info input:valid + .placeholder.basic-info{
+    top: 10px;
+	font-size: 1.3rem;
+	color: rgba(255,100,0,1);
+}
+
+.basic-info input:focus,
+.basic-info input:valid{
+    border: 3px solid orange;
+}
+
+/*Email validation -> sin terminar. -> TERMINADO 
+La idea era que al estar focus o valid, no mostrara el content del after. */
+#emailspan:after {
+	content: ' => add @';
+	color: grey;
+	font-size: 0.8rem;
+	/* font-family: Arial; */
+}
+#email-input:focus + #emailspan:after,
+#email-input:valid + #emailspan:after{
+content: none;
+}
+
+.options{
+text-align: center;
+background-color: rgba(0,0,0,1);
+font-family: Saiyan-Sans;
+font-size: 1.5rem;
+}
+
+.options#option1 {
+	color: brown;
+}
+
+.options#option2 {
+	color: goldenrod;
+}
+
+.options#option3 {
+	color: green;
 }

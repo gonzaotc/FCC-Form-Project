@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
     <link rel="stylesheet" href="css/FormStyles.css">
     <link rel="stylesheet" href="css/reset.css">
     <title>Registration Form DBZ</title>
-    
+
 </head>
 
 <body>
@@ -16,84 +17,95 @@
         Inscripción al décimo quinto torneo Budokai
     </h1>
 
-    <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ipsam hic officiis unde sequi dolores sit, asperiores magni error deserunt corporis molestias quia suscipit ex animi, odit adipisci provident recusandae!</p>
+    <p id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium ipsam hic officiis unde
+        sequi dolores sit, asperiores magni error deserunt corporis molestias quia suscipit ex animi, odit adipisci
+        provident recusandae!</p>
 
 
 
     <div id="wrapper">
+
         <div id="announcer-img-container">
             <img class="responsive-image" src="images/announcer.png"></img>
         </div>
 
-        
+
 
         <form autocomplete="off" id="survey-form">
-                
-        <div id="basic-info-container">
-            <label for="name" class="label" id="name-label">Name</label>
-            <input type="text" id="name" name="name" placeholder="name" required>
-                
-            <label for="email" class="label" id="email-label">Email</label>
-            <input type="email" id="email" name="email" placeholder="email" required>
+            <div id="basic-info-container">
+                <label for="name" class="basic-info" id="name-label">
+                    <input type="text" class="basic-info" id="name" name="name" required placeholder=" ">
+                    <span class="placeholder basic-info">Name</span>
+                </label>
 
-            <label for="number" class="label" id="number-label">Age</label>
-            <input type="number" id="number" name="age" placeholder="age" min="18" max="200" required>
-                
+                <label for="email" class="basic-info" id="email-label">
+                    <input type="email" class="basic-info" id="email-input" name="email" required placeholder=" ">
+                    <span id="emailspan" class="placeholder basic-info">Email</span>
+                </label>
 
-            <label for="dropdown" class="label">Select race:</label>
-            <select id="dropdown" name="select" required>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
-         </div>
-                
+                <label for="number" class="basic-info" id="number-label">
+                    <input type="number" id="number" class="basic-info" name="age" min="-999999" max="99999" required
+                        placeholder=" ">
+                    <span class="placeholder basic-info">Age</span>
+                </label>
 
-          <div id="radios-container">
-              <label for="" class="">ki1</label>
-              <input type="radio" id="" name="ki" value="ki1">
-
-             <label for="" class="">ki22</label>
-             <input type="radio" id="" name="ki" value="ki2">
-
-              <label for="" class="">ki3</label>
-              <input type="radio" id="" name="ki" value="ki3">
-           </div>
+                <label for="dropdown" class="label">Select your race:</label>
+                <select id="dropdown" name="select" required>
+                    <option value="option2" id="option1" class="options">Human</option>
+                    <option value="option1" id="option2" class="options">Saiyan</option>
+                    <option value="option3" id="option3" class="options">Namek</option>
+                </select>
+            </div>
 
 
-           <div id="checkboxes-container">
-             <label for="power1" class="">power1</label>
-             <input type="checkbox" id="power1" name="superpower" value="power1">
+            <div id="radios-container">
+                <label for="" class="">ki1</label>
+                <input type="radio" id="" name="ki" value="ki1">
 
-            <label for="power2" class="">power2</label>
-            <input type="checkbox" id="" name="superpower" value="power2">
+                <label for="" class="">ki22</label>
+                <input type="radio" id="" name="ki" value="ki2">
 
-               <label for="power3" class="">power3</label>
-               <input type="checkbox" id="" name="superpower" value="power3">
-
-            <label for="" class="">power4</label>
-             <input type="checkbox" id="" name="superpower" value="power4">
-          </div>
+                <label for="" class="">ki3</label>
+                <input type="radio" id="" name="ki" value="ki3">
+            </div>
 
 
-          <div id="information-container">
-              <textarea id="informacion" name="informacion" rows="10" cols="50" placeholder="Cuentanos sobre tí!. luchador."></textarea>
-         </div>
+            <div id="checkboxes-container">
+                <label for="power1" class="">power1</label>
+                <input type="checkbox" id="power1" name="superpower" value="power1">
+
+                <label for="power2" class="">power2</label>
+                <input type="checkbox" id="" name="superpower" value="power2">
+
+                <label for="power3" class="">power3</label>
+                <input type="checkbox" id="" name="superpower" value="power3">
+
+                <label for="" class="">power4</label>
+                <input type="checkbox" id="" name="superpower" value="power4">
+            </div>
 
 
-          <div id="button-container">
-             <button type="sumbit" id="submit">
-              Enviar!
-              </button>
-          </div>
-                
-            </form>
+            <div id="information-container">
+                <textarea id="informacion" name="informacion" rows="10" cols="50"
+                    placeholder="Cuentanos sobre tí!. luchador."></textarea>
+            </div>
 
 
-        <div id="table-container">
-            <h1>Tabla de inscriptos</h1>
+            <div id="button-container">
+                <button type="sumbit" id="submit">
+                    Enviar!
+                </button>
+            </div>
+
+        </form>
+
+
+        <div id="prize-container">
+            <h1>Prize</h1>
+            <img class="responsive-image" id="esfera" src="images/esfera de 2 estrellas.png"></img>
         </div>
     </div>
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
 </html>
