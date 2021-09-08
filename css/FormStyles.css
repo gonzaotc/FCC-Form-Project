@@ -155,7 +155,7 @@ Nota: valid aparece cuando es required y hay algo escrito.*/
 
 .basic-info input:focus,
 .basic-info input:valid{
-    border: 3px solid orange;
+    border: 3px solid var(--main-color);
 }
 
 /*Email validation -> sin terminar. -> TERMINADO 
