@@ -18,13 +18,12 @@
 
 <body>
     <!-- <iframe src="/audios/silencio.mp3" allow="autoplay" id="audio"></iframe> -->
-    <audio id="player" autoplay controls><source src="/audios/dbzsong.mp3" type="audio/mp3"></audio>
+    <!-- <audio id="player" controls> -->
+    <!-- <source src="/audios/dbzsong.mp3" type="audio/mp3"> -->
+    <!-- </audio> -->
     <h1 id="title">
         Inscripción al décimo quinto torneo Budokai
     </h1>
-
-    <p id="description">Información bla bla bla bla lol xd algún día aquí dirá algo útil y relevante para la progresión de la especie humanana. O capaz que no.</p>
-
 
 
     <div id="wrapper">
@@ -36,23 +35,26 @@
 
 
         <form autocomplete="off" id="survey-form">
-            <h2 id="formtitle">Registration TEST1 Form</h2>
+            <h2 id="formtitle">Registration Form</h2>
             <div id="basic-info-container">
-                <label for="name" class="basic-info" id="name-label">
-                    <input type="text" class="basic-info" id="name" name="name" required placeholder=" ">
-                    <span class="placeholder basic-info">Name</span>
-                </label>
+                <div id="basicseparator">
+                    <label for="name" class="basic-info" id="name-label">
+                        <input type="text" class="basic-info" id="name" name="name" required placeholder=" ">
+                        <span class="placeholder basic-info">Name</span>
+                    </label>
+
+                    <label for="number" class="basic-info" id="number-label">
+                        <input type="number" id="number" class="basic-info" name="age" min="-999999" max="99999"
+                            required placeholder=" ">
+                        <span class="placeholder basic-info">Age</span>
+                    </label>
+                </div>
 
                 <label for="email" class="basic-info" id="email-label">
                     <input type="email" class="basic-info" id="email" name="email" required placeholder=" ">
                     <span id="emailspan" class="placeholder basic-info">Email</span>
                 </label>
 
-                <label for="number" class="basic-info" id="number-label">
-                    <input type="number" id="number" class="basic-info" name="age" min="-999999" max="99999" required
-                        placeholder=" ">
-                    <span class="placeholder basic-info">Age</span>
-                </label>
 
                 <label for="dropdown" id="labeldropdown" class="label-title">Select your race:</label>
                 <select id="dropdown" name="select" required>
@@ -95,25 +97,29 @@
                 <h3 class="label-title">Do you have any of this powers?</h3>
                 <div id="powercheckboxes-container">
 
-                    <div class="checkboxdiv">
-                        <label for="power1" class="label-checkbox">power1</label>
-                        <input type="checkbox" id="power1" name="superpower" value="power1">
-                    </div>
+                    <span class="checkboxspan">
+                        <div class="checkboxdiv">
+                            <label for="power1" class="label-checkbox">Fly</label>
+                            <input type="checkbox" id="power1" name="superpower" value="power1">
+                        </div>
 
-                    <div class="checkboxdiv">
-                        <label for="power2" class="label-checkbox">power2</label>
-                        <input type="checkbox" id="" name="superpower" value="power2">
-                    </div>
+                        <div class="checkboxdiv">
+                            <label for="power2" class="label-checkbox">Transformation</label>
+                            <input type="checkbox" id="" name="superpower" value="power2">
+                        </div>
+                    </span>
 
-                    <div class="checkboxdiv">
-                        <label for="power3" class="label-checkbox">power3</label>
-                        <input type="checkbox" id="" name="superpower" value="power3">
-                    </div>
+                    <span class="checkboxspan">
+                        <div class="checkboxdiv">
+                            <label for="power3" class="label-checkbox">ki controll</label>
+                            <input type="checkbox" id="" name="superpower" value="power3">
+                        </div>
 
-                    <div class="checkboxdiv">
-                        <label for="power4" class="label-checkbox">power4</label>
-                        <input type="checkbox" id="" name="superpower" value="power4">
-                    </div>
+                        <div class="checkboxdiv">
+                            <label for="power4" class="label-checkbox">super strenght</label>
+                            <input type="checkbox" id="" name="superpower" value="power4">
+                        </div>
+                    </span>
                 </div>
             </div>
 
@@ -138,6 +144,7 @@
             <img class="responsive-image" id="esfera" src="images/esfera de 2 estrellas.png"></img>
         </div>
     </div>
+    <p id="description">The tournament will have place in december 2023! </p>
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 

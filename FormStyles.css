@@ -22,7 +22,14 @@ html {
 	/* font-family: Luckiest Guy; */
 	font-weight: 1;
 	text-align: center;
+	width: 100vw;
 }
+
+#player {
+position: absolute;
+top: 1%;
+}
+
 #title {
 	text-align: center;
 	color: orange;
@@ -31,7 +38,7 @@ html {
 	border-radius: 20px;
 	border: 4px solid black;
 	width: 90%;
-	font-size: 5rem;
+	font-size: 3rem;
 	padding: 10px;
 }
 #description {
@@ -51,7 +58,7 @@ body {
 	background-size: cover;
 	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
 	height: 100%;
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center; /* Centro el titulo */
@@ -72,28 +79,39 @@ body {
 	/* max-width: 500px; */
     /* border: 3px solid green; */
 	margin: 0;	
+	/* width: 25%; */
+	flex: 1 1 20%;
 }
 
 #prize-container {
 	/* border: 3px solid white; */
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin: 0;
+	/* width: 25%; */
+	flex: 1 1 20%;
 }
 
 #survey-form {
-	padding: 5%;
+	padding: 3%;
+	padding-top: 1%;
 	border-radius: 2%;
 	border: 4px solid black;
-    /* border: 3px solid red; */
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	background-color: rgba(0,0,0,0.7);
 	margin: 0;
+	flex: 1 1 60%;
+	max-width: 800px;
 }
 #formtitle {
 	text-shadow: 3px 3px 1px black,-3px 3px 1px black,3px -3px 1px black,-3px -3px 1px black;
-    font-size: 4rem;
+    font-size: 3rem;
+	/* border: 2px solid purple; */
+	margin: 0;
+	margin-bottom: 1rem;
 }
 #prize-title {
 	font-size: 4rem;
@@ -102,15 +120,17 @@ body {
 }
 
 .responsive-image {
-    max-width: 300px;
+    max-width: 45vh;
+	width: 100%;
 }
 
 #esfera {
-	max-width: 150px;
+    max-width: 20vh;
+	width: 100%;
 }
 
 
-input,select,#dropdown,#informacion {
+input,select,#dropdown,#informacion,#submit {
 	background-color: white;
 	border: none;
 	appearance: none;
@@ -135,7 +155,12 @@ input:focus {
 #basic-info-container {
 	display: flex;
 	flex-direction: column;
-	/* border: 2px solid purple; */
+	border: 2px solid purple;
+}
+
+#basicseparator{
+	display: flex;
+	justify-content: space-evenly;
 }
 
 label.basic-info {
@@ -145,6 +170,7 @@ label.basic-info {
 	font-size: 1rem;
 	/* padding para mover el placeholder arriba */
     padding-top: 20px;
+	border: 2px solid red;
 }
 
 input.basic-info {
@@ -181,7 +207,7 @@ Nota: valid aparece cuando es required y hay algo escrito.*/
 	color: var(--main-color);;
 }
 
-.basic-info input:hover,#informacion:hover{
+.basic-info input:hover,#informacion:hover,#submit:hover{
     border: 3px solid var(--main-color-light) ;
 }
 
@@ -214,10 +240,15 @@ content: none;
 
 /* CSS DROPDOWN */
 .label-title {
+	/* color: var(--main-color); */
 	margin: 0;
 	margin-top: 2rem;
 	font-size: 2rem;
 	text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
+}
+
+#labeldropdown {
+	margin-top: 1rem;
 }
 #dropdown{
 color: var(--main-color);;
@@ -267,18 +298,22 @@ padding: 4px;
 
 /* CSS KI RADIOS */
 #radios-container,#checkboxes-container {
-	/* border: 2px solid yellow; */
+	border: 2px solid yellow;
 	display: flex;
 	flex-direction: column;
 	flex: 1 1;
 }
 
 #kiradios-container,#powercheckboxes-container{
-	/* border: 2px solid red; */
+	border: 2px solid red;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
+}
+
+.checkboxspan{
+	border: 2px solid purple;
 }
 
 /* Esto lo hago para juntar cada label con su radio */
@@ -296,6 +331,11 @@ align-items: center;
 	text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
 	margin: 0;
 }
+
+.label-checkbox {
+	color: var(--main-color-light);
+}
+
 #label-ki1{
 	color: greenyellow;
 }
@@ -323,14 +363,41 @@ input[type=radio]:checked,[type=checkbox]:checked{
 }
 
 
+
 /* CSS TEXTAREA */
+
+#information-container{
+	border: 2px solid green;
+}
+
 #informacion{
 max-height: 150px;
 min-height: 75px;
+max-width: 100%;
 }
 
-@media (max-width: 700px){
+/* CSS BOTON */
+#button-container{
+	border: 2px solid magenta;
+}
+
+#submit {
+ padding: 10px;
+}
+
+
+
+@media (max-width: 750px){
 	#prize-container,#announcer-img-container{
 		display: none;
+	}
+
+	#survey-form{
+		width: 100%;
+
+	}
+
+	#wrapper {
+		margin: 5%;
 	}
 }
