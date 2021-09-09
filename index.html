@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/FormStyles.css">
     <link rel="stylesheet" href="css/reset.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <title>Registration Form DBZ</title>
 
 </head>
@@ -32,6 +37,7 @@
 
 
         <form autocomplete="off" id="survey-form">
+            <h2 id="formtitle">Registration Form</h2>
             <div id="basic-info-container">
                 <label for="name" class="basic-info" id="name-label">
                     <input type="text" class="basic-info" id="name" name="name" required placeholder=" ">
@@ -39,7 +45,7 @@
                 </label>
 
                 <label for="email" class="basic-info" id="email-label">
-                    <input type="email" class="basic-info" id="email-input" name="email" required placeholder=" ">
+                    <input type="email" class="basic-info" id="email" name="email" required placeholder=" ">
                     <span id="emailspan" class="placeholder basic-info">Email</span>
                 </label>
 
@@ -49,45 +55,73 @@
                     <span class="placeholder basic-info">Age</span>
                 </label>
 
-                <label for="dropdown" id="labeldropdown" class="label">Select your race:</label>
+                <label for="dropdown" id="labeldropdown" class="label-title">Select your race:</label>
                 <select id="dropdown" name="select" required>
-                    <option value="option2" id="option1" class="options">Human</option>
-                    <option value="option1" id="option2" class="options">Saiyan</option>
+                    <option value="" id="option0" class="options">Select</option>
+                    <option value="option1" id="option1" class="options">Human</option>
                     <option value="option3" id="option3" class="options">Namek</option>
+                    <option value="option2" id="option2" class="options">Saiyan</option>
+                    <option value="option4" id="option4" class="options">Marciano</option>
+
                 </select>
             </div>
 
 
             <div id="radios-container">
-                <label for="" class="">ki1</label>
-                <input type="radio" id="" name="ki" value="ki1">
+                <h3 class="label-title" id="label-title">Which is your power level?</h3>
 
-                <label for="" class="">ki22</label>
-                <input type="radio" id="" name="ki" value="ki2">
+                <div id="kiradios-container">
+                    <div class="radiodiv">
+                        <label for="ki1" class="label-radio" id="label-ki1">0-200</label>
+                        <input type="radio" id="ki1" name="ki" value="ki1">
+                        </label>
+                    </div>
 
-                <label for="" class="">ki3</label>
-                <input type="radio" id="" name="ki" value="ki3">
+                    <div class="radiodiv">
+                        <label for="ki2" class="label-radio" id="label-ki2">200-2000</label>
+                        <input type="radio" id="ki2" name="ki" value="ki2">
+                        </label>
+                    </div>
+
+                    <div class="radiodiv">
+                        <label for="ki3" class="label-radio" id="label-ki3">+8000!!!</label>
+                        <input type="radio" id="ki3" name="ki" value="ki3">
+                        </label>
+                    </div>
+                </div>
             </div>
 
 
             <div id="checkboxes-container">
-                <label for="power1" class="">power1</label>
-                <input type="checkbox" id="power1" name="superpower" value="power1">
+                <h3 class="label-title">Do you have any of this powers?</h3>
+                <div id="powercheckboxes-container">
 
-                <label for="power2" class="">power2</label>
-                <input type="checkbox" id="" name="superpower" value="power2">
+                    <div class="checkboxdiv">
+                        <label for="power1" class="label-checkbox">power1</label>
+                        <input type="checkbox" id="power1" name="superpower" value="power1">
+                    </div>
 
-                <label for="power3" class="">power3</label>
-                <input type="checkbox" id="" name="superpower" value="power3">
+                    <div class="checkboxdiv">
+                        <label for="power2" class="label-checkbox">power2</label>
+                        <input type="checkbox" id="" name="superpower" value="power2">
+                    </div>
 
-                <label for="" class="">power4</label>
-                <input type="checkbox" id="" name="superpower" value="power4">
+                    <div class="checkboxdiv">
+                        <label for="power3" class="label-checkbox">power3</label>
+                        <input type="checkbox" id="" name="superpower" value="power3">
+                    </div>
+
+                    <div class="checkboxdiv">
+                        <label for="power4" class="label-checkbox">power4</label>
+                        <input type="checkbox" id="" name="superpower" value="power4">
+                    </div>
+                </div>
             </div>
 
-
             <div id="information-container">
-                <textarea id="informacion" name="informacion" rows="10" cols="50"
-                    placeholder="Cuentanos sobre tí!. luchador."></textarea>
+                <h3 class="label-title" id="text-area-title">Tell us about you!, warrior</h3>
+                <textarea id="informacion" name="informacion" rows="" cols="50"
+                    placeholder="Cuentanos sobre tí!. luchador." required></textarea>
             </div>
 
 
@@ -101,7 +135,7 @@
 
 
         <div id="prize-container">
-            <h1>Prize</h1>
+            <h3 id="prize-title">Prize</h3>
             <img class="responsive-image" id="esfera" src="images/esfera de 2 estrellas.png"></img>
         </div>
     </div>

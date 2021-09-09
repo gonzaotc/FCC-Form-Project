@@ -1,6 +1,8 @@
 
 * {
 	box-sizing: border-box;
+	font-weight: 1;
+
 }
 
 @font-face {
@@ -10,26 +12,30 @@
 
 :root {
 	--main-color: rgba(255,100,0,1);
+	--main-color-light: rgba(255,190,0,1);
 }
 
 html {
 	color: white;
 	font-size: 1rem;
 	font-family: Saiyan-Sans;
+	/* font-family: Luckiest Guy; */
 	font-weight: 1;
+	text-align: center;
 }
 #title {
 	text-align: center;
 	background-color: rgba(0,0,0,0.6);
+	text-shadow: 3px 3px 1px black,-3px 3px 1px black,3px -3px 1px black,-3px -3px 1px black;
 	border-radius: 5px;
 	width: 90%;
 	font-size: 2rem;
 	padding: 10px;
-
 }
 #description {
 	text-align: center;
 	background-color: rgba(0,0,0,0.7);
+	text-shadow: 3px 3px 1px black,-3px 3px 1px black,3px -3px 1px black,-3px -3px 1px black;
 	border-radius: 5px;
 	width: 90%;
 	font-size: 2rem;
@@ -41,6 +47,7 @@ body {
 	background-size: cover;
 	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
 	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center; /* Centro el titulo */
@@ -50,30 +57,24 @@ body {
 #wrapper {
 	display: flex;
 	border: 3px solid black;
-	width: 90%;
+	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	flex: 1 1;
 }
 
 #announcer-img-container {
 	/* max-width: 500px; */
     border: 3px solid green;
-	
+	margin: 0;	
 }
 
 #prize-container {
 	border: 3px solid white;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-}
-.responsive-image {
-    max-width: 300px;
-}
-
-#esfera {
-	max-width: 150px;
+	margin: 0;
 }
 
 #survey-form {
@@ -82,9 +83,28 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: rgba(0,0,0,0.7);
-
+	margin: 0;
 }
-input,select,#dropdown {
+#formtitle {
+	text-shadow: 3px 3px 1px black,-3px 3px 1px black,3px -3px 1px black,-3px -3px 1px black;
+    font-size: 4rem;
+}
+#prize-title {
+	font-size: 4rem;
+	text-shadow: 3px 3px 1px black,-3px 3px 1px black,3px -3px 1px black,-3px -3px 1px black;
+	margin: 0;
+}
+
+.responsive-image {
+    max-width: 300px;
+}
+
+#esfera {
+	max-width: 150px;
+}
+
+
+input,select,#dropdown,#informacion {
 	background-color: white;
 	border: none;
 	appearance: none;
@@ -93,8 +113,7 @@ input,select,#dropdown {
 	border-radius: 7px;
 	border: 3px solid rgba(0,0,0,1);
 	transition: 0.3s ease;
-
-	font-family: Arial;
+	font-family: Luckiest Guy;
 }
 /* input:hover {
 	border-bottom: 3px solid orange;
@@ -105,10 +124,12 @@ input:focus {
 
 
 
+
+/* CSS BASIC INFO */
 #basic-info-container {
 	display: flex;
 	flex-direction: column;
-    text-align: center;
+	border: 2px solid purple;
 }
 
 label.basic-info {
@@ -118,21 +139,22 @@ label.basic-info {
 	font-size: 1rem;
 	/* padding para mover el placeholder arriba */
     padding-top: 20px;
-	border: 2px solid purple;
 }
 
 input.basic-info {
-    font-size: 1.5rem;
-	padding: 12px;
+    font-size: 1rem;
+	padding: 10px;
 	width: 100%;
 }
 
 .placeholder.basic-info {
 	color: var(--main-color);;
+	/* El text shadow es para agregarle borde negro a las letras. */
+	text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
 	font-size: 1.6rem;
 	position: absolute;
 	/* el left es por el padding del input */
-	left: 12px;
+	left: 10px;
 	/* El top y transform son para centrar.
 	el +10px es por el padding del label */
 	top: calc(50% + 10px);
@@ -153,11 +175,21 @@ Nota: valid aparece cuando es required y hay algo escrito.*/
 	color: var(--main-color);;
 }
 
-.basic-info input:focus,
-.basic-info input:valid{
+.basic-info input:hover,#informacion:hover{
+    border: 3px solid var(--main-color-light) ;
+}
+
+.basic-info input:focus,.basic-info input:valid,
+#informacion:focus,#informacion:valid{
     border: 3px solid var(--main-color);
 }
 
+
+
+
+
+
+/* CSS EMAIL */
 /*Email validation -> sin terminar. -> TERMINADO 
 La idea era que al estar focus o valid, no mostrara el content del after. */
 #emailspan:after {
@@ -166,26 +198,44 @@ La idea era que al estar focus o valid, no mostrara el content del after. */
 	font-size: 0.8rem;
 	/* font-family: Arial; */
 }
-#email-input:focus + #emailspan:after,
-#email-input:valid + #emailspan:after{
+#email:focus + #emailspan:after,
+#email:valid + #emailspan:after{
 content: none;
 }
 
-#labeldropdown {
+
+
+
+/* CSS DROPDOWN */
+.label-title {
 	font-size: 2rem;
+	text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
 }
 #dropdown{
 color: var(--main-color);;
-font-family: Saiyan-Sans;
+font-family: Luckiest Guy;
 font-size: 1.5rem;
-padding: 12px;
+padding: 4px;
+text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
+}
+#dropdown:hover{
+border-color: var(--main-color-light);
+}
+#dropdown:focus,#dropdown:valid{
+	border-color: var(--main-color);
 }
 
 .options{
 text-align: center;
 background-color: rgba(0,0,0,1);
-font-family: Saiyan-Sans;
+/* Lastimosamente, no aplica el text-shadow a las opciones, por lo que uso un fondo negro que queda mejor. */
+text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
+font-family: Luckiest Guy;
 font-size: 1.5rem;
+padding: 4px;
+}
+.options#option0 {
+	/* display: none; */
 }
 
 .options#option1 {
@@ -198,4 +248,85 @@ font-size: 1.5rem;
 
 .options#option3 {
 	color: green;
+}
+
+.options#option4 {
+	color: purple;
+}
+
+
+
+
+/* CSS KI RADIOS */
+#radios-container,#checkboxes-container {
+	border: 2px solid yellow;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1;
+}
+
+#label-title {
+	border: 2px solid green;
+}
+
+#kiradios-container,#powercheckboxes-container{
+	border: 2px solid red;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* Esto lo hago para juntar cada label con su radio */
+.radiodiv,.checkboxdiv {
+border: 2px solid blue;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.label-radio,.label-checkbox{
+	/* border: 2px solid red; */
+	font-family: Luckiest Guy;
+	font-size: 1.2rem;
+	text-shadow: 1px 1px 1px black,-1px 1px 1px black,1px -1px 1px black,-1px -1px 1px black;
+	margin: 0;
+}
+#label-ki1{
+	color: greenyellow;
+}
+
+#label-ki2{
+	color: yellow;
+}
+
+#label-ki3{
+	color: purple;
+}
+
+input[type=radio],input[type=checkbox]{
+	margin: 2px;
+	padding: 8px;
+	border-radius: 30%;
+}
+
+input[type=radio]:hover,[type=checkbox]:hover{
+	background-color: var(--main-color-light);
+}
+
+input[type=radio]:checked,[type=checkbox]:checked{
+	background-color:var(--main-color);
+}
+
+
+/* CSS TEXTAREA */
+#informacion{
+max-height: 150px;
+min-height: 75px;
+}
+
+@media (max-width: 700px){
+	#prize-container,#announcer-img-container{
+		display: none;
+	}
 }
