@@ -6,7 +6,7 @@
 }
 
 @font-face {
-	src: url(/fonts/Saiyan-Sans.ttf);
+	src: url(fonts/Saiyan-Sans.ttf);
 	font-family: Saiyan-Sans;
 }
 
@@ -43,7 +43,7 @@ html {
 }
 
 body {
-	background: url("/images/tournamentbackground.jpg");
+	background: url("https://github.com/gonzaotc/FCC-Form-Project/blob/main/images/tournamentbackground.jpg?raw=true");
 	background-size: cover;
 	background-position: top center;/* Esto hace que la imagen quede en el centro para distintos tamaños de pantalla */
 	height: 100%;
