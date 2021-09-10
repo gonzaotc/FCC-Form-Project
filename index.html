@@ -22,7 +22,7 @@
     <!-- <source src="/audios/dbzsong.mp3" type="audio/mp3"> -->
     <!-- </audio> -->
     <h1 id="title">
-        Inscripción al décimo quinto torneo Budokai
+        Inscription to the Budokai Tournament!
     </h1>
 
 
@@ -38,14 +38,14 @@
             <h2 id="formtitle">Registration Form</h2>
             <div id="basic-info-container">
                 <div id="basicseparator">
-                    <label for="name" class="basic-info" id="name-label">
+                    <label for="name" class="basic-info juntos" id="name-label">
                         <input type="text" class="basic-info" id="name" name="name" required placeholder=" ">
                         <span class="placeholder basic-info">Name</span>
                     </label>
 
-                    <label for="number" class="basic-info" id="number-label">
-                        <input type="number" id="number" class="basic-info" name="age" min="-999999" max="99999"
-                            required placeholder=" ">
+                    <label for="number" class="basic-info juntos" id="number-label">
+                        <input type="number" id="number" class="basic-info" class="juntos" name="age" min="-999999"
+                            max="99999" required placeholder=" ">
                         <span class="placeholder basic-info">Age</span>
                     </label>
                 </div>
@@ -55,16 +55,16 @@
                     <span id="emailspan" class="placeholder basic-info">Email</span>
                 </label>
 
-
-                <label for="dropdown" id="labeldropdown" class="label-title">Select your race:</label>
-                <select id="dropdown" name="select" required>
-                    <option value="" id="option0" class="options">Select</option>
-                    <option value="option1" id="option1" class="options">Human</option>
-                    <option value="option3" id="option3" class="options">Namek</option>
-                    <option value="option2" id="option2" class="options">Saiyan</option>
-                    <option value="option4" id="option4" class="options">Marciano</option>
-
-                </select>
+                <div id="dropdown-div">
+                    <label for="dropdown" id="labeldropdown" class="label-title">Select your race:</label>
+                    <select id="dropdown" name="select" required>
+                        <option value="" id="option0" class="options">Select</option>
+                        <option value="option1" id="option1" class="options">Human</option>
+                        <option value="option3" id="option3" class="options">Namek</option>
+                        <option value="option2" id="option2" class="options">Saiyan</option>
+                        <option value="option4" id="option4" class="options">Marcian</option>
+                    </select>
+                </div>
             </div>
 
 
@@ -111,7 +111,7 @@
 
                     <span class="checkboxspan">
                         <div class="checkboxdiv">
-                            <label for="power3" class="label-checkbox">ki controll</label>
+                            <label for="power3" class="label-checkbox">ki control</label>
                             <input type="checkbox" id="" name="superpower" value="power3">
                         </div>
 
@@ -126,7 +126,7 @@
             <div id="information-container">
                 <h3 class="label-title" id="text-area-title">Tell us about you!, warrior</h3>
                 <textarea id="informacion" name="informacion" rows="" cols="50"
-                    placeholder="Cuentanos sobre tí!. luchador." required></textarea>
+                    placeholder="One day i beated up Saitama! then i woke up" required></textarea>
             </div>
 
 
@@ -143,8 +143,11 @@
             <h3 id="prize-title">Prize</h3>
             <img class="responsive-image" id="esfera" src="images/esfera de 2 estrellas.png"></img>
         </div>
+
     </div>
-    <p id="description">The tournament will have place in december 2023! </p>
+    <footer>
+        <p id="description">@gonzaotc <a href="https://github.com/gonzaotc" target="_blank"><img src=""></a>freecodecamp css only</p>
+    </footer>
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
