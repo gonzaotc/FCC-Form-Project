@@ -35,15 +35,16 @@ top: 1%;
 	color: orange;
 	background-color: rgba(0,0,0,0.6);
 	text-shadow: 3px 3px 1px black,-3px 3px 1px black,3px -3px 1px black,-3px -3px 1px black;
-	border-radius: 20px;
+	border-radius: 15px;
 	border: 4px solid black;
 	width: 85%;
 	font-size: 4rem;
-	padding: 10px;
+	padding: 15px;
 }
 
 
 body {
+	/* border: 2px solid purple; */
 	background: url("https://github.com/gonzaotc/FCC-Form-Project/blob/main/images/tournamentbackground.jpg?raw=true");
 	background-size: cover;
 	background-position: top center; /*Esto hace que la imagen quede en el centro para distintos tamaños de pantalla*/
@@ -88,7 +89,7 @@ body {
 #survey-form {
 	/* padding: 1%; */
 	padding-top: 3rem;
-	border-radius: 2%;
+	border-radius: 15px;
 	border: 4px solid black;
 	display: flex;
 	flex-direction: column;
@@ -177,7 +178,7 @@ label.basic-info {
 }
 
 #number-label {
-	width: 20%;
+	width: 25%;
 }
 
 #email-label {
@@ -393,14 +394,16 @@ input[type=radio]:checked,[type=checkbox]:checked{
 
 #informacion{
 max-height: 150px;
-min-height: 75px;
-max-width: 80%;
+min-height: 90px;
+max-width: 85%;
+margin-top: 0.3rem;
 }
 
 /* CSS BOTON */
 #button-container{
 	/* border: 2px solid magenta; */
-	margin-top: 1rem;
+	margin-top: 3rem;
+	margin-bottom: 0.5rem;
 	width: 100%;
 	align-self: center;
 	/* border: 2px solid red; */
@@ -432,9 +435,15 @@ footer {
 	font-size: 1.2rem;
 	padding: 10px;
 	display: inline-block;
-	width: 25rem;
+	width: 85%;
 }
 
+#github {
+	width: 20px;
+	margin-right: 4px;
+	position: relative;
+	top: 3px;
+}
 a{
 	text-decoration: none;
 	color: white;
@@ -466,27 +475,22 @@ a:hover{
 @media (max-width: 500px) {
 
 	#formtitle,#title {
-		font-size: 2.3rem;
+		font-size: 2.6rem;
 	}
     .label-title{
-		font-size: 1.5rem;
+		font-size: 1.9rem;
 	}
-	#dropdown-div{
+	#dropdown-div,#kiradios-container{
 		display: flex;
 		flex-direction: column;
 	}
-	#kiradios-container{
-		/* border: 2px solid red; */
+	#dropdown{
+		margin-top: 0.3rem;
+	}
+	.radiodiv,.checkboxdiv {
+		padding: 0.12rem;
+	}
+	#powercheckboxes-container{
 		flex-direction: column;
 	}
-	.radiodiv {
-		padding: 0.1rem;
-	}
-	.label-radio,.label-checkbox {
-		font-size: 0.8rem;
-	}
-	input[type=radio],input[type=checkbox]{
-		margin: 2px;
-		padding: 6px;
-		border-radius: 30%;
 }
