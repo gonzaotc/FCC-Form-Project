@@ -436,6 +436,7 @@ footer {
 	padding: 10px;
 	display: inline-block;
 	width: 85%;
+	max-width: 23rem;
 }
 
 #github {
